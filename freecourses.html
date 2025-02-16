@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Educational Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+    <script>
+        function copyLink(link, id) {
+            const textarea = document.createElement("textarea");
+            textarea.value = link;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            
+            const button = document.getElementById(id);
+            button.innerText = "Copied!";
+            setTimeout(() => button.innerText = "Get Link", 2000);
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white">
+    <header class="py-24 text-center relative">
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">Free Resources</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Discover high-quality free courses from leading providers.</p>
+    </header>
+    
+    <main class="container mx-auto px-4 pb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <script>
+                const courses = [
+                    { id: '1', title: 'Web Pentesting', provider: 'Infy Springboard', duration: '1 hour', rating: 4.8, students: '15K+', category: 'Cyber Security', link: 'https://infyspringboard.onwingspan.com/web/en/app/toc/lex_auth_0132918171010580484361_shared/overview', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800' },
+                    { id: '2', title: 'Data Science Essentials', provider: 'NetCad By CICSO', duration: '12 weeks', rating: 4.7, students: '10K+', category: 'Data Science', link: 'https://www.netacad.com/courses/introduction-data-science?courseLang=en-US', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800' },
+                    { id: '3', title: 'UI/UX Design Principles', provider: 'Design Institute', duration: '6 weeks', rating: 4.9, students: '8K+', category: 'Design', link: 'https://example.com/ui-ux', image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800' }
+                ];
+                document.write(courses.map(course => `
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                        <img src="${course.image}" class="w-full h-40 object-cover" />
+                        <div class="p-6">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">${course.category}</span>
+                            <h2 class="text-xl font-bold text-gray-900 my-2">${course.title}</h2>
+                            <p class="text-sm text-gray-600">${course.provider} | ${course.duration}</p>
+                            <p class="text-sm text-gray-500">⭐ ${course.rating} | 👥 ${course.students}</p>
+                            <div class="mt-4 flex justify-between">
+                                <button id="copy-${course.id}" onclick="copyLink('${course.link}', 'copy-${course.id}')" class="px-4 py-2 bg-blue-600 text-white rounded-lg">Get Link</button>
+                                <a href="${course.link}" target="_blank" class="px-4 py-2 text-blue-600">Open Course</a>
+                            </div>
+                        </div>
+                    </div>
+                `).join(''));
+            </script>
+        </div>
+       
+    </main>
+    <footer class="bg-gray-900 text-white text-center py-6 mt-12">
+        <p class="text-gray-400">© 2025 Dhilip Kumar. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

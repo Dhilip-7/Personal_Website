@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Resources Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener("contextmenu", event => event.preventDefault());
+        document.addEventListener("keydown", event => {
+            if (event.ctrlKey && (event.key === "u" || event.key === "U" || event.key === "c" || event.key === "C" || event.key === "s" || event.key === "S")) {
+                event.preventDefault();
+            }
+        });
+    </script>
+    <style>
+        .transition-transform {
+            transition: transform 0.3s ease-in-out;
+        }
+        .blur-effect > div {
+            transition: all 0.3s ease-in-out;
+        }
+        .blur-effect:hover > div {
+            filter: blur(80%);
+            transform: scale(1);
+        }
+        .blur-effect > div:hover {
+            filter: blur(0px);
+            transform: scale(1.1);
+            z-index: 10;
+        }
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">
+    <div class="max-w-7xl mx-auto">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Educational Resources Hub</h1>
+            <p class="text-xl text-gray-600">Discover free resources to advance your tech career</p>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 blur-effect">
+            
+            <!-- E-Books Block -->
+            <div class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition-shadow transition-transform cursor-pointer"
+                onclick="window.location.href='book.html'">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">📖 E-Books</h2>
+                <p class="text-gray-600 mb-4">Free programming and technology e-books to enhance your knowledge</p>
+                <ul class="space-y-2">
+                    <li>🔹 Learn Python Programming</li>
+                    <li>🔹 Web Development Fundamentals</li>
+                    <li>🔹 Data Structures and Algorithms</li>
+                </ul>
+            </div>
+
+            <!-- Free Courses Block -->
+            <div class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition-shadow transition-transform cursor-pointer"
+                onclick="window.location.href='freecourses.html'">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">🎓 Free Courses</h2>
+                <p class="text-gray-600 mb-4">High-quality courses from top educators and institutions</p>
+                <ul class="space-y-2">
+                    <li>🔹 Introduction to Computer Science</li>
+                    <li>🔹 Full Stack Web Development</li>
+                    <li>🔹 Mobile App Development</li>
+                </ul>
+            </div>
+
+            <!-- Certifications Block -->
+            <div class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition-shadow transition-transform cursor-pointer"
+                onclick="window.location.href='comingsoon.html'">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">🏆 Certifications</h2>
+                <p class="text-gray-600 mb-4">Earn certificates to showcase your skills</p>
+                <ul class="space-y-2">
+                    <li>🔹 AWS Cloud Practitioner</li>
+                    <li>🔹 Google Digital Marketing</li>
+                    <li>🔹 Microsoft Azure Fundamentals</li>
+                </ul>
+            </div>
+
+            <!-- Web Development Projects Block -->
+            <div class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition-shadow transition-transform cursor-pointer"
+                onclick="window.location.href='comingsoon.html'">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">💻 Web Development Projects</h2>
+                <p class="text-gray-600 mb-4">Build real-world projects to improve your skills</p>
+                <ul class="space-y-2">
+                    <li>🔹 Portfolio Website</li>
+                    <li>🔹 E-commerce Site</li>
+                </ul>
+            </div>
+
+            <!-- Cybersecurity Projects Block -->
+            <div class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition-shadow transition-transform cursor-pointer"
+                onclick="window.location.href='comingsoon.html'">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">🔐 Cybersecurity Projects</h2>
+                <p class="text-gray-600 mb-4">Hands-on projects in cybersecurity</p>
+                <ul class="space-y-2">
+                    <li>🔹 Network Security Analysis</li>
+                    <li>🔹 Malware Analysis</li>
+                </ul>
+            </div>
+
+            <!-- Online Profiles Block -->
+            <div class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition-shadow transition-transform cursor-pointer"
+                onclick="window.location.href='onlineprofile.html'">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">🌐 Online Profiles</h2>
+                <p class="text-gray-600 mb-4">Connect with professionals and showcase your work</p>
+                <ul class="space-y-2">
+                    <li>🔹 LinkedIn</li>
+                    <li>🔹 GitHub</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+</body>
+<footer class="bg-gray-900 text-white text-center py-6 mt-12">
+    <p class="text-gray-400">© 2025 Dhilip Kumar. All rights reserved.</p>
+</footer>
+</html>

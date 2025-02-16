@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Resources Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener("contextmenu", event => event.preventDefault());
+        document.addEventListener("keydown", event => {
+            if (event.ctrlKey && (event.key === "u" || event.key === "U" || event.key === "c" || event.key === "C" || event.key === "s" || event.key === "S")) {
+                event.preventDefault();
+            }
+        });
+
+        function filterBooks(category) {
+            const bookCards = document.querySelectorAll(".book-card");
+            bookCards.forEach(card => {
+                if (category === "all" || card.dataset.category === category) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+    <style>
+        .blur-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .book-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .blur-container:hover .book-card {
+            filter: blur(4px);
+            transform: scale(1);
+        }
+        .blur-container .book-card:hover {
+            filter: blur(0px);
+            transform: scale(1.1);
+            z-index: 10;
+        }
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">
+    <div class="max-w-7xl mx-auto relative">
+        <header class="flex items-center justify-between mb-6">
+            <h1 class="text-3xl font-bold text-gray-900">Educational Resources Hub</h1>
+        </header>
+        
+        <nav class="bg-white shadow-md rounded-md p-4 w-full mb-6">
+            <ul class="flex space-x-6 justify-center">
+                <li><button class="py-2 px-4 bg-gray-200 rounded hover:bg-gray-300" onclick="filterBooks('all')">All Books</button></li>
+                <li><button class="py-2 px-4 bg-gray-200 rounded hover:bg-gray-300" onclick="filterBooks('cybersecurity')">Cybersecurity</button></li>
+                <li><button class="py-2 px-4 bg-gray-200 rounded hover:bg-gray-300" onclick="filterBooks('development')">Development</button></li>
+                <li><button class="py-2 px-4 bg-gray-200 rounded hover:bg-gray-300" onclick="filterBooks('programming')">Programming</button></li>
+            </ul>
+        </nav>
+
+        <section class="blur-container">
+            <script>
+                const books = [
+                    { title: "JavaScript Fundamentals", category: "programming", cover: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=300&h=400&fit=crop", description: "Master core JavaScript concepts.", downloadUrl: "#" },
+                    { title: "Black hat python", category: "programming", cover: "WhatsApp Image 2025-02-16 at 2.21.03 PM.jpeg", description: "Start your Python journey.", downloadUrl: "https://drive.google.com/file/d/13JJir_tGWRNEdzUnzCuSBVj8ac077-zf/view?usp=drivesdk" },
+                    { title: "React Essentials", category: "development", cover: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=300&h=400&fit=crop", description: "Learn React fundamentals.", downloadUrl: "#" },
+                    { title: "Web Design Guide", category: "development", cover: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=300&h=400&fit=crop", description: "Create stunning websites.", downloadUrl: "#" },
+                    { title: "Data Science Basics", category: "cybersecurity", cover: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=400&fit=crop", description: "Intro to data analysis.", downloadUrl: "#" },
+                    { title: "Cloud Computing", category: "cybersecurity", cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=300&h=400&fit=crop", description: "Explore cloud platforms.", downloadUrl: "#" },
+                    { title: "Mobile App Dev", category: "development", cover: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=300&h=400&fit=crop", description: "Build mobile apps.", downloadUrl: "#" },
+                    { title: "DevOps Guide", category: "cybersecurity", cover: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=300&h=400&fit=crop", description: "Learn CI/CD pipelines.", downloadUrl: "#" }
+                ];
+
+                document.addEventListener("DOMContentLoaded", () => {
+                    const section = document.querySelector(".blur-container");
+                    books.forEach(book => {
+                        const bookCard = document.createElement("div");
+                        bookCard.className = "book-card bg-white rounded-lg shadow-md overflow-hidden transition-transform";
+                        bookCard.dataset.category = book.category;
+                        bookCard.innerHTML = `
+                            <div class="aspect-[3/4] relative">
+                                <img src="${book.cover}" alt="${book.title}" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">${book.title}</h3>
+                                <p class="text-gray-600 text-sm mb-4 h-12">${book.description}</p>
+                                <button class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center gap-2" onclick="window.open('${book.downloadUrl}')">
+                                    📥 Download
+                                </button>
+                            </div>
+                        `;
+                        section.appendChild(bookCard);
+                        
+                    });
+                });
+            </script>
+        </section>
+    </div>
+    <footer class="bg-gray-900 text-white text-center py-6 mt-12">
+        <p class="text-gray-400">© 2025 Dhilip Kumar. All rights reserved.</p>
+    </footer>
+</body>
+</html>

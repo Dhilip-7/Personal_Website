@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet" />
+    <style>
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 1s ease-out; }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .animate-slide-in-left { animation: slideInLeft 1s ease-out; }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .animate-slide-in-right { animation: slideInRight 1s ease-out; }
+
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Mobile Menu Styles */
+        #mobileMenu {
+            display: none; /* Hidden by default */
+            transition: all 0.3s ease-in-out;
+        }
+        #mobileMenu.open {
+            display: block; /* Show when toggled */
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="medium"></script>
+    <link  id="favicon" rel="icon" type="image/png" href="favicon1.png">
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 transition-all duration-300">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center justify-start">
+                    <!-- Mobile Menu Button -->
+                    <button id="toggleSidebar" aria-expanded="true" aria-controls="sidebar" class="p-2 text-gray-600 rounded cursor-pointer lg:hidden hover:text-gray-900 hover:bg-gray-100">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="#" class="flex ml-2 md:mr-24">
+                        <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap">Dhilip Kumar</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="#about" class="nav-link text-gray-600 hover:text-custom transition-colors duration-300">About Me</a>
+                    <a href="#education" class="nav-link text-gray-600 hover:text-custom transition-colors duration-300">Education</a>
+                    <a href="#skills" class="nav-link text-gray-600 hover:text-custom transition-colors duration-300">Skills</a>
+                    <a href="#work" class="nav-link text-gray-600 hover:text-custom transition-colors duration-300">Work</a>
+
+                    <a href="#certifications" class="nav-link text-gray-600 hover:text-custom transition-colors duration-300">Certifications</a>
+
+                    <a href="#resources" class="nav-link text-gray-600 hover:text-custom transition-colors duration-300">Resources </a>
+                    <a href="#resume" class="nav-link text-gray-600 hover:text-custom transition-colors duration-300">Resume</a>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden bg-white border-t border-gray-200">
+            <div class="px-3 py-2 space-y-2">
+                <a href="#about" class="block p-2 text-gray-600 hover:text-custom hover:bg-gray-100 transition-colors duration-300">About Me</a>
+                <a href="#education" class="block p-2 text-gray-600 hover:text-custom hover:bg-gray-100 transition-colors duration-300">Education</a>
+                <a href="#skills" class="block p-2 text-gray-600 hover:text-custom hover:bg-gray-100 transition-colors duration-300">Skills</a>
+                <a href="#resources" class="block p-2 text-gray-600 hover:text-custom hover:bg-gray-100 transition-colors duration-300">Resources</a>
+                <a href="#certifications" class="block p-2 text-gray-600 hover:text-custom hover:bg-gray-100 transition-colors duration-300">Certifications</a>
+                <a href="#resume" class="block p-2 text-gray-600 hover:text-custom hover:bg-gray-100 transition-colors duration-300">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="pt-16">
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl animate-fade-in">
+                    Cybersecurity Student&amp; Passionate about Network Security
+                </h1>
+                <p class="mt-6 text-lg leading-8 text-gray-600 animate-fade-in">
+                    Passionate about building innovative solutions and exploring new technologies
+                </p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <a href="mailto:vankadhilip@gmail.com?subject=Inquiry&body=Hello, I would like to connect with you." class="!rounded-button bg-custom px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-all duration-300 transform hover:scale-105">
+                        Contact Me
+                    </a>
+                    <a href="#projects" class="!rounded-button text-sm font-semibold leading-6 text-gray-900 transition-all duration-300 transform hover:scale-105 animate-pulse">
+                        View Projects <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-white py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="animate-slide-in-left">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900">About Me</h2>
+                        <p class="mt-6 text-lg leading-8 text-gray-600">
+                            I am a passionate cybersecurity enthusiast with a strong interest in ethical hacking, penetration testing, and bug bounty hunting. I specialize in identifying security vulnerabilities, understanding cyber threats, and implementing defensive strategies to protect digital assets .
+                            I am also learning bug bounty hunting, aiming to identify and report security flaws in web applications, networks, and systems. I am dedicated to responsible disclosure, writing high-quality security reports, and earning rewards for ethical hacking contributions.
+                            
+                            With a mindset of continuous learning, I stay updated with the latest security trends, tools, and techniques. I am eager to collaborate with like-minded individuals and contribute to the cybersecurity community.
+                        </p>
+                    </div>
+                    <div class="relative flex justify-center items-center animate-slide-in-right">
+                        <img src="6165522542815724129.jpg" alt="Profile Image" class="w-auto h-39 rounded-lg shadow-lg" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 text-center mb-16 animate-fade-in">Education</h2>
+                <div class="space-y-8">
+                    <div class="relative p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 animate-fade-in">
+                        <div class="flex items-center">
+                            <div class="h-12 w-12 rounded-full bg-custom flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-white text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">M.Tech in Computer Science</h3>
+                                <p class="text-sm text-gray-500">Stanford University • 2028-2030</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 animate-fade-in">
+                        <div class="flex items-center">
+                            <div class="h-12 w-12 rounded-full bg-custom flex items-center justify-center">
+                                <i class="fas fa-university text-white text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">B.Tech in Computer Science</h3>
+                                <p class="text-sm text-gray-500">VIET • 2024-2028</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-white py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 text-center mb-16">Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 bg-gray-50 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-shield-alt text-custom text-xl"></i>
+                            <h3 class="ml-3 text-lg font-semibold">Cybersecurity</h3>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium">Penetration Testing</span>
+                                <span class="text-xs bg-custom text-white px-2 py-1 rounded">Expert</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium">Malware Analysis</span>
+                                <span class="text-xs bg-custom text-white px-2 py-1 rounded">Advanced</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium">Incident Response</span>
+                                <span class="text-xs bg-custom text-white px-2 py-1 rounded">Expert</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium">Threat Intelligence</span>
+                                <span class="text-xs bg-custom text-white px-2 py-1 rounded">Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-network-wired text-custom text-xl"></i>
+                            <h3 class="ml-3 text-lg font-semibold">Network Security</h3>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium">Firewall Configuration</span>
+                                <span class="text-xs bg-custom text-white px-2 py-1 rounded">Expert</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium">IDS/IPS</span>
+                                <span class="text-xs bg-custom text-white px-2 py-1 rounded">Advanced</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium">Network Protocols</span>
+                                <span class="text-xs bg-custom text-white px-2 py-1 rounded">Expert</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium">VPN/Authentication</span>
+                                <span class="text-xs bg-custom text-white px-2 py-1 rounded">Advanced</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"><div class="flex items-center mb-4"><i class="fas fa-code text-custom text-xl"></i><h3 class="ml-3 text-lg font-semibold">Secure Development</h3></div><div class="space-y-2"><div class="flex items-center justify-between"><span class="text-sm font-medium">SAST/DAST</span><span class="text-xs bg-custom text-white px-2 py-1 rounded">Advanced</span></div><div class="flex items-center justify-between"><span class="text-sm font-medium">Code Review</span><span class="text-xs bg-custom text-white px-2 py-1 rounded">Expert</span></div><div class="flex items-center justify-between"><span class="text-sm font-medium">Secure SDLC</span><span class="text-xs bg-custom text-white px-2 py-1 rounded">Advanced</span></div><div class="flex items-center justify-between"><span class="text-sm font-medium">API Security</span><span class="text-xs bg-custom text-white px-2 py-1 rounded">Expert</span></div></div></div><div class="p-6 bg-gray-50 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"><div class="flex items-center mb-4"><i class="fas fa-laptop-code text-custom text-xl"></i><h3 class="ml-3 text-lg font-semibold">Web Design</h3></div><div class="space-y-2"><div class="flex items-center justify-between"><span class="text-sm font-medium">HTML/CSS</span><span class="text-xs bg-custom text-white px-2 py-1 rounded">Intermediate</span></div><div class="flex items-center justify-between"><span class="text-sm font-medium">JavaScript</span><span class="text-xs bg-custom text-white px-2 py-1 rounded">Basic</span></div><div class="flex items-center justify-between"><span class="text-sm font-medium">UI/UX Design</span><span class="text-xs bg-custom text-white px-2 py-1 rounded">Basic</span></div><div class="flex items-center justify-between"><span class="text-sm font-medium">Responsive Design</span><span class="text-xs bg-custom text-white px-2 py-1 rounded">Intermediate</span></div></div></div></div>
+            </div>
+        </section>
+
+        <section id="research" class="py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 text-center mb-16">Research Work</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105">
+                        <img src="-44fa-8fa3-c83d1ab22507&flag=05365e49-bd5f-4ce4-bd3b-cb54c1250965&flag=59e2f080-1ffd-48f3-9c20-f6d569468e33&flag=60a423a0-8087-4fd6-ba07-d29e0cc2e99a&flag=188f9de0-a1eb-4e68-92ba-0d60a8aee353&flag=8de07145-d7c4-4493-996b-f588259176db&flag=063bfc3d-e9a2-43fe-8b7d-cd5605ce9e93&flag=673847f0-a573-4812-81de-eee711c2a531&flag=82f69f01-3826-4b3a-818f-9fcabea3665c&flag=46044e17-59c2-401f-a9c0-812337c0e795&flag=807fdcee-501b-452a-8774-a3c26ce3b9dc&flag=a37d0a69-635d-4940-ac2f-b9af2a3464ad&flag=81b7249d-29d8-4890-954a-b50da4e46dab&flag=70af6642-bc2f-4271-b39e-d7fad61ee723&flag=e7fe4b1b-7ace-4c84-994e-32cd6a31f49a&flag=3e1edc91-3002-4f86-a529-b53c78d8101c&flag=8e3c6eb4-5314-4846-a540-bccc50718082" alt="Machine Learning Security" class="w-full h-48 object-cover rounded-t-lg mb-4"/>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Cyber Security Free Resources</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive collection of free resources for cybersecurity learning, including TryHackMe, HackTheBox, OWASP Top 10, Portswigger Web Security Academy, and more. Perfect for beginners to advanced learners.</p>
+                        <a href="second.html" class="text-custom hover:text-indigo-600 font-medium transition-all duration-300 cursor-pointer inline-flex items-center" onclick="window.location.href=&#39;/cyber-security-resources&#39;">View All Resources →</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105"><img src="https://creatie.ai/ai/api/search-image?query=Distributed systems security architecture and blockchain technology visualization&width=600&height=400&flag=ba6986b7-bc7f-43db-8530-32a9f6973408&flag=dabdb755-9baf-44e9-a403-ae06cbb9f755&flag=6a8d68e0-9450-4dec-a298-0d54cbb403c0&flag=713322bd-4b14-4108-bf77-3a323674bb25&flag=77f1822d-229d-4027-8ca4-7c1178d9d96c&flag=b8cf9313-21d4-45cf-9d1b-ba4ee87c0ed0&flag=7fa0579e-38f6-4fcb-8553-8b466c6f1cdd&flag=d27fae05-cec0-4caf-8354-4a60d5a666c5&flag=c531f5a4-74c5-48a2-b4de-781526803c63&flag=141525e5-61a9-4ebc-a033-1f2eaa2b14f0&flag=b263edec-ff86-41b3-80bb-981c1a24652f&flag=47965492-b247-49b1-889e-29c24842d464&flag=12fbf1fc-e82a-4a26-bbf3-21673c6d7115&flag=25edf429-bb2a-46b6-80bc-5ed4017b7579&flag=4208a3ea-8c75-4871-bdcc-6b24d07e46de&flag=e9ac2473-202d-45d1-b461-f057da5f8167&flag=036e2952-5844-4687-a43c-2404d88a0680&flag=e75a2566-1928-46b5-b94f-8d743b8bd02d&flag=287ec682-1608-4ced-8b7b-9321ea247b2f&flag=61415de8-1717-4507-b49d-56cdee061509&flag=0da030cd-e128-4e22-b276-df183d394f8e&flag=b588fc02-9606-4fab-9587-e0f10518705a&flag=704bf064-581f-42c0-9baa-b582115b8891" alt="Distributed Systems Security" class="w-full h-48 object-cover rounded-t-lg mb-4"/><h3 class="text-xl font-semibold text-gray-900 mb-4">Development Roadmap</h3><p class="text-gray-600 mb-4">Comprehensive step-by-step guides for learning various technology stacks, including frontend, backend, DevOps, and cloud computing.</p><a href="#" class="text-custom hover:text-indigo-600 font-medium">Read More →</a></div>
+                </div>
+                <section id="certifications" class="py-24 bg-white">
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 text-center mb-16">Certifications</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="p-6 border border-gray-200 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-custom">
+                                <div class="flex items-center mb-4">
+                                    <img src="https://creatie.ai/ai/api/search-image?query=AWS certification logo&width=50&height=50&flag=a016e57f-5e95-4bcf-b32c-aa18803f80b1&flag=86e9d118-8914-4bc4-9eb2-bb63fdb4a8cb&flag=a7489245-9a53-4b99-8279-fe172416da89&flag=20bb1f8e-5c46-4008-abb3-a9b72b39fea8&flag=d7b771f2-3835-44b8-886e-b508f8ebcfd4&flag=37a90753-98cf-4575-b94a-e42e7dfdb9d1&flag=b3e0766f-ec87-4a61-b406-7c00247714be&flag=c8c648fb-bccd-47cf-87e2-a00571a458b9&flag=f91f0ceb-e2f9-4781-8a4e-d6587fc5a484&flag=fb019fdc-5c6f-4702-ba59-0931af2815a9" alt="AWS" class="w-12 h-12 object-contain"/>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-semibold">AWS Solutions Architect</h3>
+                                        <p class="text-sm text-gray-500">Amazon Web Services</p>
+                                    </div></div><p class="text-gray-600 mb-4">Credential ID: AWS-123456</p>
+                                    <span class="text-sm text-custom">Issued Dec 2023</span>
+                                </div>
+                                <div class="p-6 border border-gray-200 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-custom">
+                                    <div class="flex items-center mb-4">
+                                        <img src="https://creatie.ai/ai/api/search-image?query=Google Cloud certification logo&width=50&height=50&flag=cf5cfe7e-e73e-4f30-a305-96f5d4435f4a&flag=419cc58b-c986-4063-8c09-f4a3dc6bfa17&flag=598cfce6-736c-46ba-a583-5d7755132be8&flag=153a829a-5cc7-4bfd-a030-0211486eb399&flag=6229395f-db1a-4f19-bf62-55200225feb5&flag=692b62a5-b745-48af-a3fb-12ec9a932bd7&flag=4cdc9092-5154-4280-818a-14551806952b&flag=71af3cc9-c2ff-469d-9f64-e272cca55e8b&flag=1ac9ce79-4807-4acf-8a39-c0dcd85d4442&flag=b8931b6f-909d-4728-b487-230338d1c62a" alt="GCP" class="w-12 h-12 object-contain"/>
+                                        <div class="ml-4">
+                                            <h3 class="text-lg font-semibold">Google Cloud Professional</h3>
+                                            <p class="text-sm text-gray-500">Google Cloud Platform</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">Credential ID: GCP-789012</p>
+                                    <span class="text-sm text-custom">Issued Jan 2024</span>
+                                </div>
+                                <div class="p-6 border border-gray-200 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-custom">
+                                    <div class="flex items-center mb-4">
+                                        <img src="https://creatie.ai/ai/api/search-image?query=Microsoft Azure certification logo&width=50&height=50&flag=a4e05ca6-58a6-4545-aa7f-d31eff042be1&flag=fd6df318-d18a-4436-91a6-ff8d3675fbab&flag=1e999276-66fc-4517-a315-f5ab870e57e2&flag=addb2e7a-d84e-41de-93bd-60db2079e80b&flag=a8cdb942-d4c8-47a4-a15d-cf8cceafd9da&flag=a60abcb2-137e-4524-8924-9ed8bdefe76c&flag=eb244635-a353-4ddc-858d-8c6119ed8bef&flag=307119f2-d219-4a55-b57a-b2388b8131d1&flag=903e52e5-79eb-4b9f-b244-3b3e05b60d0f&flag=8586ca05-9545-4baa-ae7f-1d237e4167c1" alt="Azure" class="w-12 h-12 object-contain"/>
+                                        <div class="ml-4">
+                                            <h3 class="text-lg font-semibold">Azure Solutions Expert</h3>
+                                            <p class="text-sm text-gray-500">Microsoft Azure</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">Credential ID: AZ-345678</p>
+                                    <span class="text-sm text-custom">Issued Nov 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="resources" class="py-24 bg-gray-50">
+                        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <h2 class="text-3xl font-bold tracking-tight text-gray-900 text-center mb-16">Learning Resources</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="bg-white p-6 rounded-lg shadow-sm transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-custom">
+                                    <h3 class="text-xl font-bold mb-4 text-custom">Cybersecurity Resources</h3>
+                                    <ul class="space-y-3 text-gray-600">
+                                        <li>• TryHackMe Learning Path</li>
+                                        <li>• HackTheBox Tutorials</li>
+                                        <li>• OWASP Top 10 Guide</li>
+                                        <li>• Cybersecurity Tools List</li>
+                                    </ul><a href="#" class="mt-4 inline-block text-custom hover:text-indigo-600">View All →</a></div>
+                                    <div class="bg-white p-6 rounded-lg shadow-sm transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-custom">
+                                        <h3 class="text-xl font-bold mb-4 text-custom">Development Roadmaps</h3>
+                                        <ul class="space-y-3 text-gray-600">
+                                            <li>• Frontend Development Path</li>
+                                            <li>• Backend Development Guide</li>
+                                            <li>• DevOps Learning Track</li>
+                                            <li>• Cloud Architecture Path</li>
+                                        </ul><a href="#" class="mt-4 inline-block text-custom hover:text-indigo-600">View All →</a>
+                                    </div>
+                                    <div class="bg-white p-6 rounded-lg shadow-sm transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-custom">
+                                        <h3 class="text-xl font-bold mb-4 text-custom">YouTube Channels</h3>
+                                        <ul class="space-y-3 text-gray-600">
+                                            <li>• FreeCodeCamp</li>
+                                            <li>• Traversy Media</li>
+                                            <li>• FireShip</li>
+                                            <li>• TechWorld with Nana</li>
+                                        </ul><a href="#" class="mt-4 inline-block text-custom hover:text-indigo-600">View All →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+            </div>
+            
+
+        
+  
+
+        <!-- Resume Section 
+        
+        <section id="resume" class="bg-white py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center flex flex-col items-center">
+                    <h2 class="text-4xl font-bold tracking-tight text-gray-900 mb-6 bg-gradient-to-r from-custom to-indigo-600 bg-clip-text text-transparent">My Resume</h2>
+                    <a href="Resume2025_02.pdf" class="!rounded-button inline-flex items-center px-8 py-4 bg-custom text-white font-semibold hover:bg-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden group" onclick="window.location.href=&#39;data:application/pdf;base64,YOUR_BASE64_ENCODED_PDF_CONTENT&#39;; return false;" download="Resume2025_02.pdf">
+                        <span class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                        <span class="relative"><i class="fas fa-download mr-3 animate-bounce"></i>Download Resume (PDF, 2.1MB)</span>
+                    </a>
+                    
+                    
+                    
+                    <p class="mt-4 text-gray-600">Get a detailed overview of my experience and qualifications</p>
+                </div>
+            </div>
+        </section>
+
+    -->
+
+    <section id="resume" class="bg-white py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center flex flex-col items-center">
+                <h2 class="text-4xl font-bold tracking-tight text-gray-900 mb-6 bg-gradient-to-r from-custom to-indigo-600 bg-clip-text text-transparent">My Resume</h2>
+                <!-- Download Button -->
+                <a href="Resume2025_02.pdf" class="!rounded-button inline-flex items-center px-8 py-4 bg-custom text-white font-semibold hover:bg-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden group" download="Resume2025_02.pdf">
+                    <span class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span class="relative"><i class="fas fa-download mr-3 animate-bounce"></i>Download Resume (PDF, 1.1MB)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+        
+
+        <!-- Footer -->
+        <footer class="bg-gray-900">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://github.com/Dhilip-7" class="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vanka-dhilip/" class="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://www.fast.com" class="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+                <div class="text-center text-gray-400">
+                    <p>© 2024 Dhilip Kumar. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        // Toggle Mobile Menu
+        const toggleSidebar = document.getElementById('toggleSidebar');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        toggleSidebar.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Close Mobile Menu When a Link is Clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault(); // Disable right-click
+        });
+        
+        document.addEventListener("copy", function(event) {
+            event.preventDefault(); // Disable copying
+        });
+        
+        document.addEventListener("cut", function(event) {
+            event.preventDefault(); // Disable cutting
+        });
+        
+        document.addEventListener("paste", function(event) {
+            event.preventDefault(); // Disable pasting
+        });
+        </script>
+        
+</body>
+</html>
